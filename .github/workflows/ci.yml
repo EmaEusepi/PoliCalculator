@@ -11,14 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      -name: Set up CMake
+      - name: Set up CMake
         uses: jwlawson/actions-setup-cmake@v1
       
-      -name: Configure CMAKE
+      - name: Configure CMAKE
         run: cmake -S . -B build
       
-      -name: Build
+      - name: Build
         run: cmake --build build
 
-      -name: Run Tests
+      - name: Run Tests
         run: ctest --test-dir build
